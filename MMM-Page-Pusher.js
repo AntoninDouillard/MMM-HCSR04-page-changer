@@ -4,11 +4,9 @@
 Module.register("MMM-Page-Pusher", {
   
   defaults: {
-    leftPinTrigger: 23,
-    leftPinEcho: 24,
-    rightPinTrigger: 20,
-    rightPinEcho: 21,
-    debug: false,
+    PinTrigger: 20,
+    PinEcho: 21,
+    debug: true,
     threshold: 20,
     pirSensor: false,
   },

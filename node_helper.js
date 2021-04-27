@@ -6,6 +6,8 @@ var threshold;
 var pirSensor;
 var isRunning = false;
 
+var change = 0;
+
 module.exports = NodeHelper.create({
     
     start:function() {
@@ -38,17 +40,25 @@ module.exports = NodeHelper.create({
 		    if(debug) (console.log(message))
 	    
 		    data = message.result
-		    left = parseFloat(data.left).toFixed(0)
-		    right = parseFloat(data.right).toFixed(0)
+		    distance = parseFloat(data.distance).toFixed(0)
+		    console.log(distance)
 		    
 		    //calculate if page needs to be changed
-		    if (left <= threshold && right >= threshold) {
-			self.sendSocketNotification("PAGE_CHANGED", 0);
-			if(debug) (console.log("DECREMENT PAGE"))
-		    } else if (left >= threshold && right <= threshold) {
-			self.sendSocketNotification("PAGE_CHANGED", 1);
-			if(debug) (console.log("INCREMENT PAGE"))
+		    if (distance <= threshold) {
+		        if (change == 0) {
+			    self.sendSocketNotification("PAGE_CHANGED", 1);
+			    if(debug) (console.log("PAGE = 1"))
+			    change = 1
+			} else if (change == 1) {
+			    self.sendSocketNotification("PAGE_CHANGED", 0);
+			    if(debug) (console.log("PAGE = 0"))
+			    change = 0
+			}
 		    }
+		   // else if (distance >= threshold) {
+		   //     self.sendSocketNotification("PAGE_CHANGED", 1);
+		   //     if(debug) (console.log("INCREMENT PAGE"))
+		   // }
 		}
 	    //catch exceptions
 	    } catch (e) {
@@ -74,3 +84,4 @@ module.exports = NodeHelper.create({
     }
  
 })
+
