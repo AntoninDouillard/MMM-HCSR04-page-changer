@@ -1,3 +1,17 @@
+# Under construction
+
+This repo is a fork of zerosamski/MMM-Page-Pusher.
+
+The difference is this module use only one HCSR04 instead of two.
+
+TODO :
+
+* Add gif to show how to use
+* Add this module to to 3rd modules MagicMirror
+* Edit Readme
+
+More comming soon...
+
 # MMM-Page-Pusher
 A module for magic mirror that uses 2 HCSR04 sensors to enable switching between pages
 
