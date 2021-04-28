@@ -40,11 +40,11 @@ var config = {
 
 ### Configuration options
 
-| Option             | Type               | Default Value            | Description |
-| ------------------ | ------------------ | ------------------------ | --------- |
-| `PinTrigger`   | `int`              | `20`                     | GPIO pin location of the trigger of the sensor that will be on the left |
-| `PinEcho`      | `int`              | `21`                     | GPIO pin location of the echo of the sensor that will be on the left |
-| `debug`.           | `boolean`          | `false`                  | Enables extra loggin feature (distance measured by sensors) |
+| Option             | Type               | Default Value            | Description                                    |
+| ------------------ | ------------------ | ------------------------ | ---------------------------------------------- |
+| `PinTrigger`       | `int`              | `20`                     | GPIO pin location of the trigger of the sensor |
+| `PinEcho`          | `int`              | `21`                     | GPIO pin location of the echo of the sensor    |
+| `debug`.           | `boolean`          | `false`                  | Enables extra loggin feature (distance measured by sensor) |
 | `threshold`        | `int`              | `20`                     | Distance at which a push should be registered. Default is 20 cm, so if your hand is closer than 20 cm to the sensor, it will register it as a 'push' |
 | `pirSensor`        | `boolean`          | `false`                  | If you are using MMM-PIR-Sensor with MMM-PIR-Sensor (https://github.com/paviro/MMM-PIR-Sensor) this will pause stop the script when your display is off and start it again if motion is detected and the screen is turned back on. Saves energy :) |
 
