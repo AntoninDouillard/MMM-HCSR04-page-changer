@@ -57,4 +57,4 @@ I got the idea from [MMM-Page-Pusher](https://github.com/zerosamski/MMM-Page-Pus
 * Add gif to show how to use
 * Add this module to to 3rd modules MagicMirror
 
-<p style="text-align: center;">Made with :heart: from :fr:.</p>
+Made with :heart: from :fr:.
