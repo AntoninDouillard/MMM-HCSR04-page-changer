@@ -53,13 +53,13 @@ module.exports = NodeHelper.create({
           if (distance <= threshold) {
             if (change == 0) {
               self.sendSocketNotification("PAGE_CHANGED", 1);
+			  change = 1;
               if (debug) console.log("PAGE = 1");
-              change = 1;
             } else if (change == 1) {
               self.sendSocketNotification("PAGE_CHANGED", 0);
+			  change = 0;
               if (debug) console.log("PAGE = 0");
-              change = 0;
-            }
+			}
           }
         }
         //catch exceptions

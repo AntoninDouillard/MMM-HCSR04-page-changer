@@ -12,7 +12,7 @@ Please contact me at antonin.info@protonmail.com for any issue or question.
 
 ### How it works
 
-Node helper gets the data from the sensor every 0.3 second via a python script. When you 'push' towards
+Node helper gets the data from the sensor every 0.8 second via a python script. When you 'push' towards
 the sensor it sends a socket notification to [MMM-Pages](https://github.com/edward-shen/MMM-pages).
 
 You should use MMM-page-indicator and MMM-pages to enjoy this module.

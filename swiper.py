@@ -78,7 +78,7 @@ if __name__ == '__main__':
     try:
         while True:
             get_distances()
-            time.sleep(0.3)
+            time.sleep(0.8)
 
     # Reset by pressing CTRL + C
     except KeyboardInterrupt:
