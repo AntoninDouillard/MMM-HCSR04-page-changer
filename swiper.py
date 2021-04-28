@@ -1,4 +1,6 @@
-#Libraries
+#!/usr/bin/python3
+# coding: utf-8
+
 import RPi.GPIO as GPIO
 import time
 import json
@@ -25,15 +27,13 @@ def to_node(type, message):
         print(json.dumps({type: message}))
     except Exception:
         pass
-    
+
     sys.stdout.flush()
 
 
 def get_distances():
     d = distance()    
-    result = {
-    "distance": d,
-    }
+    result = {"distance": d}
     to_node("result", result)
 
  
@@ -41,7 +41,8 @@ def distance():
 
     values = []
 
-    for i in range(10):
+    # To avoir measurement errors, we average the last 10 results
+    for _ in range(1, 10):
         # set Trigger to HIGH
         GPIO.output(GPIO_TRIGGER, True)
  
@@ -72,14 +73,14 @@ def distance():
 
 
 if __name__ == '__main__':
+
     to_node("info", 'Python script for MMM-Sam-Swipes has started')
     try:
         while True:
             get_distances()
             time.sleep(1)
 
-        # Reset by pressing CTRL + C
+    # Reset by pressing CTRL + C
     except KeyboardInterrupt:
         print("Measurement stopped by User")
         GPIO.cleanup()
-
