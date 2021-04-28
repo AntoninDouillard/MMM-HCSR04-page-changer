@@ -74,11 +74,11 @@ def distance():
 
 if __name__ == '__main__':
 
-    to_node("info", 'Python script for MMM-Sam-Swipes has started')
+    to_node("info", 'Python script for MMM-HCSR04-page-changer has started')
     try:
         while True:
             get_distances()
-            time.sleep(1)
+            time.sleep(0.3)
 
     # Reset by pressing CTRL + C
     except KeyboardInterrupt:

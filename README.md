@@ -12,7 +12,7 @@ Please contact me at antonin.info@protonmail.com for any issue or question.
 
 ### How it works
 
-Node helper gets the data from the sensor every second via a python script. When you 'push' towards
+Node helper gets the data from the sensor every 0.3 second via a python script. When you 'push' towards
 the sensor it sends a socket notification to [MMM-Pages](https://github.com/edward-shen/MMM-pages).
 
 ### MagicMirror² Example Configuration
@@ -56,3 +56,5 @@ I got the idea from [MMM-Page-Pusher](https://github.com/zerosamski/MMM-Page-Pus
 
 * Add gif to show how to use
 * Add this module to to 3rd modules MagicMirror
+
+<p style="text-align: center;">Made with :heart: from :fr:.</p>
