@@ -48,7 +48,6 @@ module.exports = NodeHelper.create({
 
           data = message.result;
           distance = parseFloat(data.distance).toFixed(0);
-          console.log(distance);
 
           //calculate if page needs to be changed
           if (distance <= threshold) {
