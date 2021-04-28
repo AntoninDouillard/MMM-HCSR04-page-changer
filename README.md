@@ -65,7 +65,7 @@ var config = {
         ...
         {
             module: "MMM-pages",
-		    config: {
+            config: {
                 modules:
                     [
                         ["MMM-Formula1"], // Page 1
